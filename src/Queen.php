@@ -11,9 +11,7 @@
         }
         function canAttack($user_x, $user_y)
         {
-            if ($user_x == $this->x_coord || $user_y == $this->y_coord) {
-                return true;
-            } elseif (abs($user_x - $this->x_coord) == abs($user_y - $this->y_coord)) {
+            if ($user_x == $this->x_coord || $user_y == $this->y_coord || abs($user_x - $this->x_coord) == abs($user_y - $this->y_coord)) {
                 return true;
             } else {
                 return false;

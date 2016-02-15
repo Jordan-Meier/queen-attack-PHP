@@ -29,5 +29,18 @@
             $this->assertEquals(true, $result);
             $this->assertEquals(false, $result2);
         }
+        function test_canAttack_diagonal()
+        {
+            // arrange
+            $test_Queen = new Queen(4,4);
+
+            // act
+            $result = $test_Queen->canAttack(1,1);
+            $result2 = $test_Queen->canAttack(1,3);
+
+            // assert
+            $this->assertEquals(true, $result);
+            $this->assertEquals(false, $result2);
+        }
     }
 ?>

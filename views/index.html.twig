@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    <title>Queen Attack</title>
+</head>
+<body>
+    <div class='container'>
+        <h1>Calculate if your queen can attack another piece at a specified coordinate on the chess board </h1>
+        <form action='/queen_attack'>
+            <div class='form-group'>
+              <label for='qx_coord'>Queen X Coordinate:</label>
+              <input id='qx_coord' name='qx_coord' class='form-control' type='number'>
+              <label for='qy_coord'>Queen Y Coordinate:</label>
+              <input id='qy_coord' name='qy_coord' class='form-control' type='number'>
+            </div>
+            <div class='form-group'>
+              <label for='ix_coord'>Other Piece X Coordinate:</label>
+              <input id='ix_coord' name='ix_coord' class='form-control' type='number'>
+              <label for='iy_coord'>Other Piece Y Coordinate:</label>
+              <input id='iy_coord' name='iy_coord' class='form-control' type='number'>
+            </div>
+            <button type='submit' class='btn-success'>Will Queen Attack?</button>
+        </form><br>
+
+        <div class="well">
+            {% if result %}
+                <p>Can Attack!</p>
+            {% else %}
+                <p>Cannot Attack!</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
